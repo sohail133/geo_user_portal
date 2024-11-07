@@ -1,0 +1,21 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  host: localhost
+  username: postgres
+  password: postgres
+
+development:
+  <<: *default
+  database: geo_user_portal
+
+test:
+  <<: *default
+  database: geo_user_portal_test
+
+production:
+  <<: *default
+  database: geo_user_portal_production
+  username: ruby-rails-sample
+  password: <%= ENV['RUBY-RAILS-SAMPLE_DATABASE_PASSWORD'] %>
