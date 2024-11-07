@@ -16,6 +16,4 @@ test:
 
 production:
   <<: *default
-  database: geo_user_portal_production
-  username: ruby-rails-sample
-  password: <%= ENV['RUBY-RAILS-SAMPLE_DATABASE_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL'] %>
