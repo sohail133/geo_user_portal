@@ -44,8 +44,8 @@ This README provides the necessary steps to set up and run the application, ensu
   bundle exec rake rswag:specs:swaggerize
   ```
 
-* **Deployment instructions**  
-  - For production, precompile assets and run database migrations.
-  - Start the server using a suitable web server, such as Puma or Passenger.
-
+* **Production URL**  
+    ```bash
+  https://geouserportal-production.up.railway.app/api-docs/index.html
+  ```
 ---

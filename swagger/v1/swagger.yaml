@@ -71,6 +71,6 @@ components:
       - updated_at
 servers:
 - url: http://localhost:3000
-  variables:
-    defaultHost:
-      default: localhost:3000
+  description: Local Development
+- url: https://geouserportal-production.up.railway.app
+  description: Production Environment
