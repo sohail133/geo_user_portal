@@ -106,6 +106,8 @@ GEM
     erubi (1.13.0)
     faker (3.5.1)
       i18n (>= 1.8.11, < 2)
+    fast_jsonapi (1.5)
+      activesupport (>= 4.2)
     globalid (1.2.1)
       activesupport (>= 6.1)
     i18n (1.14.6)
@@ -352,6 +354,7 @@ DEPENDENCIES
   capybara
   debug
   faker
+  fast_jsonapi
   importmap-rails
   jbuilder
   kaminari

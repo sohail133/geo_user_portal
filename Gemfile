@@ -15,6 +15,7 @@ gem 'rswag-ui'
 gem 'faker'
 gem 'ostruct'
 gem 'kaminari'
+gem 'fast_jsonapi'
 
 group :development, :test do
   gem "brakeman", require: false

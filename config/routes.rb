@@ -8,6 +8,10 @@ Rails.application.routes.draw do
     namespace :admin_portal do
       namespace :v1 do
         resources :users, only: [:index]
+        resources :continents, only: [:index]
+        resources :countries, only: [:index]
+        resources :states, only: [:index]
+        resources :cities, only: [:index]
       end
     end
   end  

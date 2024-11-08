@@ -5,6 +5,62 @@ info:
   version: v1
   description: API documentation for the application
 paths:
+  "/api/admin_portal/v1/cities":
+    get:
+      summary: List Cities
+      tags:
+      - Cities
+      responses:
+        '200':
+          description: Cities found
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  "$ref": "#/components/schemas/city"
+  "/api/admin_portal/v1/continents":
+    get:
+      summary: List Continents
+      tags:
+      - Continents
+      responses:
+        '200':
+          description: Continents found
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  "$ref": "#/components/schemas/continent"
+  "/api/admin_portal/v1/countries":
+    get:
+      summary: List Countries
+      tags:
+      - Countries
+      responses:
+        '200':
+          description: Countries found
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  "$ref": "#/components/schemas/country"
+  "/api/admin_portal/v1/states":
+    get:
+      summary: List States
+      tags:
+      - States
+      responses:
+        '200':
+          description: States found
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  "$ref": "#/components/schemas/state"
   "/api/admin_portal/v1/users":
     get:
       summary: List Users
