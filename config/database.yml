@@ -2,10 +2,10 @@ default: &default
   adapter: postgresql
   encoding: unicode
   pool: 5
-  username: <%= ENV['PGUSER'] || 'postgres' %>
-  password: <%= ENV['PGPASSWORD'] || 'postgres' %>
-  port: <%= ENV['PGPORT'] || 5432 %>
-  host: <%= ENV['PGHOST'] || 'localhost' %>
+  username: <%= ENV['PGUSER'] %>
+  password: <%= ENV['PGPASSWORD'] %>
+  port: <%= ENV['PGPORT'] %>
+  host: <%= ENV['PGHOST'] %>
 
 development:
   <<: *default
