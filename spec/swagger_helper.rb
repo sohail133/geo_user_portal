@@ -33,10 +33,10 @@ RSpec.configure do |config|
       },
       servers: [
         {
-          url: 'http://{defaultHost}',
+          url: Rails.env.production? ? 'https://geouserportal-production.up.railway.app' : 'http://localhost:3000',
           variables: {
             defaultHost: {
-              default: 'localhost:3000'
+              default: Rails.env.production? ? 'geouserportal-production.up.railway.app' : 'localhost:3000'
             }
           }
         }

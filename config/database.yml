@@ -2,21 +2,22 @@ default: &default
   adapter: postgresql
   encoding: unicode
   pool: 5
-  username: <%= ENV['PGUSER'] %>
-  password: <%= ENV['PGPASSWORD'] %>
-  port: <%= ENV['PGPORT'] %>
-  host: <%= ENV['PGHOST'] %>
+  host: localhost
+  username: postgres
+  password: postgres
 
 development:
   <<: *default
   database: geo_user_portal
-  host: localhost
 
 test:
   <<: *default
   database: geo_user_portal_test
-  host: localhost
 
 production:
   <<: *default
+  host: <%= ENV['PGHOST'] %>
+  username: <%= ENV['PGUSER'] %>
+  password: <%= ENV['PGPASSWORD'] %>
+  port: <%= ENV['PGPORT'] %>
   database: <%= ENV['PGDATABASE'] %>

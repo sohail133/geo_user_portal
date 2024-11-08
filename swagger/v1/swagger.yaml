@@ -70,7 +70,7 @@ components:
       - created_at
       - updated_at
 servers:
-- url: http://{defaultHost}
+- url: http://localhost:3000
   variables:
     defaultHost:
       default: localhost:3000
