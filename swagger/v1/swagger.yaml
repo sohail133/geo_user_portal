@@ -125,6 +125,55 @@ components:
       - id
       - created_at
       - updated_at
+    continent:
+      type: object
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+      required:
+      - id
+      - name
+    country:
+      type: object
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+        continent_id:
+          type: integer
+      required:
+      - id
+      - name
+      - continent_id
+    state:
+      type: object
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+        country_id:
+          type: integer
+      required:
+      - id
+      - name
+      - country_id
+    city:
+      type: object
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+        state_id:
+          type: integer
+      required:
+      - id
+      - name
+      - state_id
 servers:
 - url: http://localhost:3000
   description: Local Development

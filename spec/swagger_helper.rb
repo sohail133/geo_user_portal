@@ -28,6 +28,41 @@ RSpec.configure do |config|
               updated_at: { type: :string, format: 'date-time' }
             },
             required: %w[id created_at updated_at]
+          },
+          continent: {
+            type: :object,
+            properties: {
+              id: { type: :integer },
+              name: { type: :string }
+            },
+            required: %w[id name]
+          },
+          country: {
+            type: :object,
+            properties: {
+              id: { type: :integer },
+              name: { type: :string },
+              continent_id: { type: :integer }
+            },
+            required: %w[id name continent_id]
+          },
+          state: {
+            type: :object,
+            properties: {
+              id: { type: :integer },
+              name: { type: :string },
+              country_id: { type: :integer }
+            },
+            required: %w[id name country_id]
+          },
+          city: {
+            type: :object,
+            properties: {
+              id: { type: :integer },
+              name: { type: :string },
+              state_id: { type: :integer }
+            },
+            required: %w[id name state_id]
           }
         }
       },
