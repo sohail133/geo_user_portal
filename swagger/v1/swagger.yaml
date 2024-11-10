@@ -87,6 +87,11 @@ paths:
         description: Filter by city
         schema:
           type: string
+      - name: page
+        in: query
+        description: Page number for pagination
+        schema:
+          type: integer
       responses:
         '200':
           description: Users found
